@@ -55,4 +55,12 @@ public class MoveWithCharacterController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
+
+    public void Jump()
+    {
+        if (groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight = 3.0f * -3.0f * gravityValue);
+        }
+    }
 }
